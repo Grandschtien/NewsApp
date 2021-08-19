@@ -16,15 +16,10 @@ class NetworkService {
         
         session.dataTask(with: url) { data, response, error in
             guard let data = data else {return}
-            
-            do {
-                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? Data else { throw NetworkError.noInternetConnection }
+            print(data)
                 DispatchQueue.main.async {
-                    completion(json)
+                    completion(data)
                 }
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
         }.resume()
     }
 }

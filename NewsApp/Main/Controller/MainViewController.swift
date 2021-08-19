@@ -15,8 +15,9 @@ class MainViewController: UIViewController {
         
         mainTableView.delegate = self
         mainTableView.dataSource = self
-        MainNetworkService.getNews { news in
-            print(news.news)
+        MainNetworkService.getNews {[weak self] news in
+            self?.news = news
+            self?.mainTableView.reloadData()
         }
     }
     
@@ -24,15 +25,18 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        guard let countOfArticles = news.articles?.count else {
+            return 0
+        }
+        return countOfArticles
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else { return UITableViewCell()}
         
-        let article = news
-    
+        guard let article = news.articles?[indexPath.row] else { return UITableViewCell() }
+        cell.configurate(arcticle: article)
         return cell
     }
     

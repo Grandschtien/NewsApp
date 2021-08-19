@@ -9,17 +9,13 @@ import Foundation
 class MainNetworkService {
     private init() {}
     
-    static func getNews(completion: @escaping (NewsResponse)->()) {
+    static func getNews(completion: @escaping (News)->()) {
         guard let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=\(apiKey)") else {
             return
         }
         NetworkService.shared.getData(url: url) { json in
-            do{
-                let response = try NewsResponse(json: json)
+                let response = Decoder.shared.decode(data: json)
                 completion(response)
-            }catch {
-                print(error)
-            }
         }
     }
 }

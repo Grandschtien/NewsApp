@@ -22,6 +22,7 @@
 		60D2848026CECD24006F490A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2847F26CECD24006F490A /* Article.swift */; };
 		60D2848226CECD38006F490A /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2848126CECD38006F490A /* Source.swift */; };
 		60D2848526CEDECC006F490A /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2848426CEDECC006F490A /* Decoder.swift */; };
+		60D2848726CEF04A006F490A /* NewsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2848626CEF04A006F490A /* NewsItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		60D2847F26CECD24006F490A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		60D2848126CECD38006F490A /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		60D2848426CEDECC006F490A /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		60D2848626CEF04A006F490A /* NewsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		60D2846426CEC4AD006F490A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				60D2848626CEF04A006F490A /* NewsItemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				60D2847126CEC621006F490A /* NetworkSevice.swift in Sources */,
 				60D2847E26CECCFE006F490A /* NetworkErrors.swift in Sources */,
 				60D2845226CEC387006F490A /* MainViewController.swift in Sources */,
+				60D2848726CEF04A006F490A /* NewsItemViewController.swift in Sources */,
 				60D2847926CECC4B006F490A /* News.swift in Sources */,
 				60D2847326CEC7C1006F490A /* MainCell.swift in Sources */,
 				60D2844E26CEC387006F490A /* AppDelegate.swift in Sources */,

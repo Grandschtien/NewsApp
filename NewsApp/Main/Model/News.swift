@@ -11,16 +11,10 @@ struct News: Codable {
     let totalResults: Int?
     let articles: [Article]?
     
-    init?(dictionary: [String: AnyObject]) {
-        guard let status = dictionary["status"] as? String,
-              let totalResults = dictionary["totalResults"] as? Int,
-              let articles = dictionary["articles"] as? [Article] else {
-            return nil
-        }
-        print(articles)
-        self.status = status
-        self.totalResults = totalResults
-        self.articles = articles
+    init() {
+        status = nil
+        totalResults = nil
+        articles = nil
     }
 }
 
