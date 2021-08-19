@@ -9,23 +9,31 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
-    
+    private var news = News()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        MainNetworkService.getNews { news in
+            print(news.news)
+        }
     }
     
 }
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath)
+        
+        let article = news
+    
+        return cell
     }
     
     

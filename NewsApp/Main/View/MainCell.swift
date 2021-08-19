@@ -11,4 +11,10 @@ class MainCell: UITableViewCell {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var newsLabel: UILabel!
     
+    
+    func configurate(arcticle: Article){
+        headerLabel.text = arcticle.title
+        
+        newsLabel.text = arcticle.articleDescription
+    }
 }
