@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		60D2844E26CEC387006F490A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2844D26CEC387006F490A /* AppDelegate.swift */; };
 		60D2845026CEC387006F490A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2844F26CEC387006F490A /* SceneDelegate.swift */; };
-		60D2845226CEC387006F490A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2845126CEC387006F490A /* ViewController.swift */; };
+		60D2845226CEC387006F490A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2845126CEC387006F490A /* MainViewController.swift */; };
 		60D2845526CEC387006F490A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D2845326CEC387006F490A /* Main.storyboard */; };
 		60D2845726CEC38C006F490A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D2845626CEC38C006F490A /* Assets.xcassets */; };
 		60D2845A26CEC38C006F490A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D2845826CEC38C006F490A /* LaunchScreen.storyboard */; };
+		60D2846E26CEC55E006F490A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2846D26CEC55E006F490A /* Constants.swift */; };
+		60D2847126CEC621006F490A /* NetworkSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2847026CEC621006F490A /* NetworkSevice.swift */; };
+		60D2847326CEC7C1006F490A /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2847226CEC7C1006F490A /* MainCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		60D2844A26CEC387006F490A /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D2844D26CEC387006F490A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D2844F26CEC387006F490A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		60D2845126CEC387006F490A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		60D2845126CEC387006F490A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		60D2845426CEC387006F490A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60D2845626CEC38C006F490A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D2845926CEC38C006F490A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D2845B26CEC38C006F490A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60D2846D26CEC55E006F490A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		60D2847026CEC621006F490A /* NetworkSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSevice.swift; sourceTree = "<group>"; };
+		60D2847226CEC7C1006F490A /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,114 @@
 		60D2844C26CEC387006F490A /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				60D2844D26CEC387006F490A /* AppDelegate.swift */,
-				60D2844F26CEC387006F490A /* SceneDelegate.swift */,
-				60D2845126CEC387006F490A /* ViewController.swift */,
-				60D2845326CEC387006F490A /* Main.storyboard */,
-				60D2845626CEC38C006F490A /* Assets.xcassets */,
-				60D2845826CEC38C006F490A /* LaunchScreen.storyboard */,
-				60D2845B26CEC38C006F490A /* Info.plist */,
+				60D2846226CEC47D006F490A /* Application */,
+				60D2846326CEC483006F490A /* NewsItem */,
+				60D2846126CEC46A006F490A /* Main */,
 			);
 			path = NewsApp;
+			sourceTree = "<group>";
+		};
+		60D2846126CEC46A006F490A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				60D2846926CEC4BD006F490A /* Model */,
+				60D2846826CEC4BB006F490A /* View */,
+				60D2846726CEC4B9006F490A /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		60D2846226CEC47D006F490A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				60D2846F26CEC5FD006F490A /* Controller */,
+				60D2846C26CEC50B006F490A /* SupportingFiles */,
+				60D2846B26CEC4F6006F490A /* Storyboard */,
+				60D2847026CEC621006F490A /* NetworkSevice.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		60D2846326CEC483006F490A /* NewsItem */ = {
+			isa = PBXGroup;
+			children = (
+				60D2846626CEC4B2006F490A /* Model */,
+				60D2846526CEC4AF006F490A /* View */,
+				60D2846426CEC4AD006F490A /* Controller */,
+			);
+			path = NewsItem;
+			sourceTree = "<group>";
+		};
+		60D2846426CEC4AD006F490A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60D2846526CEC4AF006F490A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60D2846626CEC4B2006F490A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60D2846726CEC4B9006F490A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60D2845126CEC387006F490A /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60D2846826CEC4BB006F490A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60D2847226CEC7C1006F490A /* MainCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60D2846926CEC4BD006F490A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60D2846B26CEC4F6006F490A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				60D2845326CEC387006F490A /* Main.storyboard */,
+				60D2845826CEC38C006F490A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		60D2846C26CEC50B006F490A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				60D2846D26CEC55E006F490A /* Constants.swift */,
+				60D2845626CEC38C006F490A /* Assets.xcassets */,
+				60D2845B26CEC38C006F490A /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		60D2846F26CEC5FD006F490A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60D2844D26CEC387006F490A /* AppDelegate.swift */,
+				60D2844F26CEC387006F490A /* SceneDelegate.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D2845226CEC387006F490A /* ViewController.swift in Sources */,
+				60D2847126CEC621006F490A /* NetworkSevice.swift in Sources */,
+				60D2845226CEC387006F490A /* MainViewController.swift in Sources */,
+				60D2847326CEC7C1006F490A /* MainCell.swift in Sources */,
 				60D2844E26CEC387006F490A /* AppDelegate.swift in Sources */,
 				60D2845026CEC387006F490A /* SceneDelegate.swift in Sources */,
+				60D2846E26CEC55E006F490A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PLUM5QCSG5;
-				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NewsApp/Application/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +415,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PLUM5QCSG5;
-				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NewsApp/Application/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
