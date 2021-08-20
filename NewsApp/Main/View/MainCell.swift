@@ -14,7 +14,6 @@ class MainCell: UITableViewCell {
     
     func configurate(arcticle: Article){
         headerLabel.text = arcticle.title
-        
         newsLabel.text = arcticle.articleDescription
     }
 }

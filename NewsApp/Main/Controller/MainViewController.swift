@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     private var news = News()
+    private var indexPathFOrSelectedCourse: IndexPath?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,9 +43,19 @@ extension MainViewController: UITableViewDataSource {
     
     
 }
-
+//MARK:- TableView delegate
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.indexPathFOrSelectedCourse = indexPath
+        performSegue(withIdentifier: "newsItem", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+//MARK:- Prepare for segue
+
+extension MainViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "newsItem", let destinationVC = segue.destination as? NewsItemViewController else { return }
+        destinationVC.indexPathForSelectedNewsItem = self.indexPathFOrSelectedCourse
     }
 }

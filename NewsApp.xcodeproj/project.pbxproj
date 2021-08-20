@@ -157,7 +157,6 @@
 		60D2846926CEC4BD006F490A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				60D2847C26CECC81006F490A /* Response */,
 				60D2847826CECC4B006F490A /* News.swift */,
 				60D2847F26CECD24006F490A /* Article.swift */,
 				60D2848126CECD38006F490A /* Source.swift */,
@@ -208,13 +207,6 @@
 				60D2847D26CECCFE006F490A /* NetworkErrors.swift */,
 			);
 			path = NetworkService;
-			sourceTree = "<group>";
-		};
-		60D2847C26CECC81006F490A /* Response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		60D2848326CEDEC0006F490A /* SupportingFiles */ = {

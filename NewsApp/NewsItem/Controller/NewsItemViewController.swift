@@ -9,9 +9,11 @@ import UIKit
 
 class NewsItemViewController: UIViewController {
 
+    var indexPathForSelectedNewsItem: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(indexPathForSelectedNewsItem ?? IndexPath())
         // Do any additional setup after loading the view.
     }
     

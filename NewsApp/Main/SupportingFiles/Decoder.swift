@@ -15,7 +15,6 @@ class Decoder {
         guard let decoded = try? decoder.decode(News.self, from: data) else {
             fatalError("Can't decode json")
         }
-     
         return decoded
     }
 }
