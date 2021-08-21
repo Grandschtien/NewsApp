@@ -14,13 +14,16 @@ class MainViewController: UIViewController {
     private var imageUrl = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mainTableView.isHidden = true
+       
         mainTableView.delegate = self
         mainTableView.dataSource = self
         do {
             try MainNetworkService.getNews {[weak self] news in
                 self?.news = news
                 self?.mainTableView.reloadData()
+
+                self?.mainTableView.isHidden = false
             }
         } catch NetworkError.invalidUrl {
             print("Неверный URL")
