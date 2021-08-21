@@ -9,10 +9,8 @@ import Foundation
 class MainNetworkService {
     private init() {}
     
-    static func getNews(completion: @escaping (News)->()) {
-        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=\(apiKey)") else {
-            return
-        }
+    static func getNews(completion: @escaping (News)->()) throws {
+        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=\(apiKey)") else { throw NetworkError.invalidUrl }
         NetworkService.shared.getData(url: url) { json in
                 let response = Decoder.shared.decode(data: json)
                 completion(response)

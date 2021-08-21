@@ -7,25 +7,75 @@
 
 import UIKit
 
-class NewsItemViewController: UIViewController {
 
+class NewsItemViewController: UIViewController {
+    private enum DataStyle {
+        case name
+        case content
+        case date
+        case author
+        case image
+    }
     var indexPathForSelectedNewsItem: IndexPath?
+    var imageUrl: String?
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(indexPathForSelectedNewsItem ?? IndexPath())
-        // Do any additional setup after loading the view.
+        self.newsImage.image = UIImage(named: "photo.fill")
+        fetchName(indexPath: indexPathForSelectedNewsItem ?? IndexPath())
+        fetchContent(indexPath: indexPathForSelectedNewsItem ?? IndexPath())
+        fetchDate(indexPath: indexPathForSelectedNewsItem ?? IndexPath())
+        fetchAuthor(indexPath: indexPathForSelectedNewsItem ?? IndexPath())
+        fetchImage()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+//MARK:- Fetching content
+extension NewsItemViewController {
+    private func fetchImage() {
+        NewsItemNetworkManager.dowloadImage(url: imageUrl ?? "") { image in
+            DispatchQueue.main.async {
+                self.newsImage.image = image ?? UIImage(named: "photo.fill")
+                self.newsImage.contentMode = .scaleAspectFit
+            }
+        }
     }
-    */
+    private func fetchName(indexPath: IndexPath) {
+        NewsItemNetworkManager.getNewsItem {[weak self] news in
+            DispatchQueue.main.async {
+                self?.nameLabel.text = news.articles?[indexPath.row].title
+            }
+        }
+    }
+    
+    private func fetchContent(indexPath: IndexPath) {
+        NewsItemNetworkManager.getNewsItem {[weak self] news in
+            DispatchQueue.main.async {
+                self?.contentLabel.text = news.articles?[indexPath.row].content
+            }
+        }
+    }
+    private func fetchDate(indexPath: IndexPath) {
+        NewsItemNetworkManager.getNewsItem {[weak self] news in
+            DispatchQueue.main.async {
+                guard let date = news.articles?[indexPath.row].publishedAt else { return }
+                guard let upperBound = date.index(date.endIndex, offsetBy: -11, limitedBy: date.startIndex) else { return }
+                self?.dateLabel.text = String(date[...upperBound])
+            }
+        }
+    }
+    private func fetchAuthor(indexPath: IndexPath) {
+        NewsItemNetworkManager.getNewsItem {[weak self] news in
+            DispatchQueue.main.async {
+                self?.authorLabel.text = news.articles?[indexPath.row].author
+            }
+        }
+    }
 
+    
 }

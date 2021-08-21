@@ -1,0 +1,136 @@
+{
+    "status": "ok",
+    "totalResults": 10,
+    "articles": [
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Christine Hall",
+            "title": "Communication software startup Channels takes on event management with text workflow",
+            "description": "Three University of Michigan students are building Channels Inc., a communication software tailored for physical workers, and already racking up some big customers in the event management industry.",
+            "url": "https://techcrunch.com/2021/08/20/communication-software-startup-channels-takes-on-event-management-with-text-workflow/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/08/Channels-Inc..jpg?w=711",
+            "publishedAt": "2021-08-20T12:30:16Z",
+            "content": "Three University of Michigan students are building Channels Inc., a communication software tailored for physical workers, and already racking up some big customers in the event management industry.\r\n… [+3840 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Sarah Perez",
+            "title": "Apple launches a new iOS app, 'Siri Speech Study,' to gather feedback for Siri improvements",
+            "description": "Apple recently began a research study designed to collect speech data from study participants. Earlier this month, the company launched a new iOS app called “Siri Speech Study” on the App Store, which allows participants who have opted in to share their voice…",
+            "url": "https://techcrunch.com/2021/08/20/apple-launches-a-new-ios-app-siri-speech-study-to-gather-feedback-for-siri-improvements/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/08/siri_og.png?w=762",
+            "publishedAt": "2021-08-20T12:00:41Z",
+            "content": "Apple recently began a research study designed to collect speech data from study participants. Earlier this month, the company launched a new iOS app called “Siri Speech Study” on the App Store, whic… [+4883 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Natasha Lomas",
+            "title": "China passes data protection law",
+            "description": "China has passed a personal data protection law, state media Xinhua reports (via Reuters). The law, called the Personal Information Protection Law (PIPL), is set to take effect on November 1. It was proposed last year — signalling an intent by China’s communi…",
+            "url": "https://techcrunch.com/2021/08/20/china-passes-data-protection-law/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/05/GettyImages-1148122627.jpg?w=600",
+            "publishedAt": "2021-08-20T10:35:31Z",
+            "content": "China has passed a personal data protection law, state media Xinhua reports (via Reuters).\r\nThe law, called the Personal Information Protection Law (PIPL), is set to take effect on November 1.\r\nIt wa… [+4227 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Manish Singh",
+            "title": "Facebook launches program to help small Indian businesses secure loans",
+            "description": "Facebook is launching a new program in India to help small and medium-sized businesses secure loans in the South Asian market as the company makes further push to expand its presence among merchants. The social conglomerate said its new program, called Small …",
+            "url": "https://techcrunch.com/2021/08/20/facebook-launches-program-to-help-small-and-medium-sized-indian-businesses-secure-loans/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2020/05/GettyImages-936481322.jpg?w=600",
+            "publishedAt": "2021-08-20T07:30:10Z",
+            "content": "Facebook is launching a new program in India to help small and medium-sized businesses secure loans in the South Asian market as the company makes further push to expand its presence among merchants.… [+2228 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Tage Kene-Okafor",
+            "title": "Alerzo raises $10.5M Series A to bring Nigeria’s informal retail sector online",
+            "description": "The process of digitizing the operations of mom and pop stores in Nigeria is serious business right now. In fact, it might be the second-best thing after fintech at the moment. Today’s news is from Alerzo, a little-known B2B e-commerce retail startup based in…",
+            "url": "https://techcrunch.com/2021/08/20/alerzo-raises-10-5m-series-a-to-bring-nigerias-informal-retail-sector-online/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/08/D14DE013-E58F-437D-AADF-9ACBE72FEE15.jpeg?w=600",
+            "publishedAt": "2021-08-20T07:11:29Z",
+            "content": "The process of digitizing the operations of mom and pop stores in Nigeria is serious business right now. In fact, it might be the second-best thing after fintech at the moment.\r\nToday’s news is from … [+5952 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Manish Singh",
+            "title": "Microsoft backs India's Oyo at $9.6 billion valuation",
+            "description": "Microsoft has invested $5 million in Indian budget hotel chain Oyo, according to a regulatory filing this week. The investment confirms a TechCrunch scoop from last month. The new investment values Oyo at $9.6 billion, only slightly below the $10 billion impl…",
+            "url": "https://techcrunch.com/2021/08/19/microsoft-backs-indias-oyo-at-9-6-billion-valuation/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2019/10/GettyImages-1156202815.jpg?w=600",
+            "publishedAt": "2021-08-20T06:51:29Z",
+            "content": "Microsoft has invested $5 million in Indian budget hotel chain Oyo, according to a regulatory filing this week. The investment confirms a TechCrunch scoop from last month.\r\nThe new investment values … [+2108 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Rebecca Bellan, Aria Alamalhodaei",
+            "title": "Top four highlights of Elon Musk's Tesla AI Day",
+            "description": "Elon Musk wants Tesla to be seen as “much more than an electric car company.” On Thursday’s Tesla AI Day, the CEO described Tesla as a company with “deep AI activity in hardware on the inference level and on the training level” that can be used down the line …",
+            "url": "https://techcrunch.com/2021/08/19/top-five-highlights-of-elon-musks-tesla-ai-day/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-20-at-12.40.05-pm.png?w=723",
+            "publishedAt": "2021-08-20T04:51:31Z",
+            "content": "Elon Musk wants Tesla to be seen as much more than an electric car company. On Thursdays Tesla AI Day, the CEO described Tesla as a company with deep AI activity in hardware on the inference level an… [+9536 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Aria Alamalhodaei, Rebecca Bellan",
+            "title": "Musk: The Tesla Bot is coming",
+            "description": "Remember that weird Will Smith movie about robots? Yeah, neither do we. But Elon Musk does. Tesla is developing a 5’8” Tesla Bot, with a prototype expected sometime next year. The news comes during Tesla’s inaugural AI Day, which was streamed on the company’s…",
+            "url": "https://techcrunch.com/2021/08/19/musk-the-tesla-bot-is-coming/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-20-at-2.09.02-pm.png?w=649",
+            "publishedAt": "2021-08-20T02:31:39Z",
+            "content": "Remember that weird Will Smith movie about robots?\r\nYeah, neither do we. But Elon Musk does. Tesla is developing a 58 Tesla Bot, with a prototype expected sometime next year. The news comes during Te… [+1554 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Catherine Shu",
+            "title": "Indonesian D2C insurance marketplace Lifepal raises $9M Series A",
+            "description": "Choosing an insurance policy is one of the most complicated financial decisions a person can make. Jakarta-based Lifepal wants to simplify the process for Indonesians with a marketplace that lets users compare policies from more than 50 providers, get help fr…",
+            "url": "https://techcrunch.com/2021/08/19/indonesian-d2c-insurance-marketplace-lifepal-raises-9m-series-a/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/08/Team-picture_Lifepal-e1629358217443.jpg?w=550",
+            "publishedAt": "2021-08-20T01:00:01Z",
+            "content": "Choosing an insurance policy is one of the most complicated financial decisions a person can make. Jakarta-based Lifepal wants to simplify the process for Indonesians with a marketplace that lets use… [+5433 chars]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Alex Wilhelm",
+            "title": "Daily Crunch: Under pressure from 'banking partners and payout providers,’ OnlyFans bans explicit content",
+            "description": "Hello friends and welcome to Daily Crunch, bringing you the most important startup, tech and venture capital news in a single package.",
+            "url": "https://techcrunch.com/2021/08/19/daily-crunch-50/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/08/GettyImages-1232558496.jpeg?w=600",
+            "publishedAt": "2021-08-19T22:10:13Z",
+            "content": "To get a roundup of TechCrunchs biggest and most important stories delivered to your inbox every day at 3 p.m. PDT, subscribe here.\r\nHello and welcome to Daily Crunch for August 19, 2021. Today is a … [+6193 chars]"
+        }
+    ]
+}

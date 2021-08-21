@@ -9,6 +9,7 @@ import Foundation
 
 enum NetworkError: Error {
     case failInternetError
+    case invalidUrl
     case noInternetConnection
     case invalidJson
 }

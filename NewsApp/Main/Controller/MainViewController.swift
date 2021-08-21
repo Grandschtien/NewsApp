@@ -11,14 +11,21 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     private var news = News()
     private var indexPathFOrSelectedCourse: IndexPath?
+    private var imageUrl = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainTableView.delegate = self
         mainTableView.dataSource = self
-        MainNetworkService.getNews {[weak self] news in
-            self?.news = news
-            self?.mainTableView.reloadData()
+        do {
+            try MainNetworkService.getNews {[weak self] news in
+                self?.news = news
+                self?.mainTableView.reloadData()
+            }
+        } catch NetworkError.invalidUrl {
+            print("Неверный URL")
+        } catch {
+            print("Что то пошло не так...")
         }
     }
     
@@ -47,6 +54,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.indexPathFOrSelectedCourse = indexPath
+        self.imageUrl = news.articles?[indexPath.row].urlToImage ?? ""
         performSegue(withIdentifier: "newsItem", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -57,5 +65,6 @@ extension MainViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "newsItem", let destinationVC = segue.destination as? NewsItemViewController else { return }
         destinationVC.indexPathForSelectedNewsItem = self.indexPathFOrSelectedCourse
+        destinationVC.imageUrl = self.imageUrl
     }
 }
